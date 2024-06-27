@@ -1,11 +1,18 @@
 import './App.css';
 import Board from './components/Board';
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
 
 function App() {
   return (
     <>
-      <h1>Tic Tac Toe</h1>
-      <Board />
+
+      <Routes>
+        <Route path = "/" element = { <Home /> } />
+        <Route path = "/single-player" element = { <Board /> } />
+        <Route path = "/multi-player" element = { <Board /> } />
+      </Routes>          
+      
     </>
     
   );
